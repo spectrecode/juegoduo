@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Aprendiendo</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/juego.css"> 
+    </head>
+    <body>
+        <h1><center>Aprendiendo</center></h1>
+         <div class="reglas">
+            <h3>REGLAS DEL JUEGO</h3>
+            <DIV>
+                Aprenderemos cuales son las vocales cerradas y las vocales abiertas.
+                <ol>
+                    <li>Las vocales abiertas son "a", "e", "o".</li>
+                    <li>Las vocales cerradas son "i", "u"</li>
+                </ol>
+            </DIV>
+        </div>
+        <div id="contenedor">
+            <div class="reloj" id="Horas">00</div>
+            <div class="reloj" id="Minutos">:00</div>
+            <div class="reloj" id="Segundos">:00</div>
+            <div class="reloj" id="Centesimas">:00</div>
+            <input type="button" class="boton" id="inicio" value="Start &#9658;" onclick="inicio();">
+            <input type="button" class="boton" id="parar" value="Stop &#8718;" onclick="parar();" disabled>
+            <input type="button" class="boton" id="continuar" value="Resume &#8634;" onclick="inicio();" disabled>
+            <input type="button" class="boton" id="reinicio" value="Reset &#8635;" onclick="reinicio();" disabled>
+        </div>
+        <p>Las Vocales</p>
+        <div id="destino1" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+            <img src="img/vocalA.jpg" id="arrastrable1" draggable="true" ondragstart="return empezar(event)" ondragend="return end(event)">
+            <img src="img/vocalE.jpg" id="arrastrable2" draggable="true" ondragstart="return empezar(event)" ondragend="return end(event)">
+            <img src="img/vocalI.jpg" id="arrastrable3" draggable="true" ondragstart="return empezar(event)" ondragend="return end(event)">
+            <img src="img/vocalO.jpg" id="arrastrable4" draggable="true" ondragstart="return empezar(event)" ondragend="return end(event)">  
+            <img src="img/vocalU.jpg" id="arrastrable5" draggable="true" ondragstart="return empezar(event)" ondragend="return end(event)">                   
+        </div>
+        <p>Vocales Abiertas</p>
+        <div id="destino2" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+        </div>
+        <p>Vocales Cerradas</p>
+        <div id="destino3" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+        </div>
+        <script type="text/javascript" src="js/juego.js"></script>
+        </script>
+    </body>
+</html>

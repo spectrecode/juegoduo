@@ -50,52 +50,103 @@ body {
 }
 .cucho {
 	background-image: url(../gif/cat-1.gif);
-	animation: movimientoGato 15s 0;
+	animation: movimientoGato 12s 0;
 	width: 16%;
     height: 26%;
     bottom: 20px;
 }
+.juego {
+	z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
 @keyframes movimiento1 {
-	from {
-		margin-left: 100%;
-	}
-	to {
-		margin-left: -30%;
-	}
+	from { margin-left: 100%;}
+	to { margin-left: -30%;}
 }
 @keyframes movimiento2 {
-	from {
-		margin-left: -30%;
-	}
-	to {
-		margin-left: 100%;
-	}
+	from { margin-left: -30%;}
+	to { margin-left: 100%;}
 }
 @keyframes movimiento3 {
-	from {
-		margin-left: -30%;
-	}
-	to {
-		margin-left: 100%;
-	}
+	from { margin-left: -30%;}
+	to { margin-left: 100%;}
 }
 @keyframes movimiento4 {
-	from {
-		margin-left: 100%;
-	}
-	to {
-		margin-left: -20%;
-	}
+	from { margin-left: 100%;}
+	to { margin-left: -20%;}
 }
 @keyframes movimiento5 {
-	from {
-		margin-left: -30%;
-	}
-	to {
-		margin-left: 100%;
-	}
+	from { margin-left: -30%;}
+	to { margin-left: 100%;}
 }
 @keyframes movimientoGato {
     from {left: -30%;}
     to {left: 100%;}
+}
+/* jUEGO PROPIAMENTE DICHO */
+
+#destino1, #destino2 ,#destino3{
+    float: left;
+    width: 350px;
+    height: 350px;
+    padding: 10px;
+    margin: 10px;
+}
+#arrastrable1, #arrastrable2, #arrastrable3,#arrastrable4,#arrastrable5{
+    width: 75px;
+    height: 75px;
+    padding: 5px;
+    margin: 5px;
+}
+#destino1,#destino2,#destino3 {
+    background-color: rgba(50, 143, 63, 0.5);
+    background: rgba(50, 143, 63, 0.5);
+    color: rgba(50, 143, 63, 0.5);
+}
+#arrastrable1 {
+    background-color: #CC0;
+}
+#arrastrable2 {
+    background-color: #FC0;
+}  
+#arrastrable3 {
+    background-color: #F0E07F; 
+}
+#arrastrable4{
+    background-color: #1D5E94; 
+}
+#arrastrable5 {
+    background-color: #D97D94; 
+}
+/*estilos del reloj*/
+
+#contenedor{
+    height: 115px;
+}
+.reloj{
+    float: left;
+    font-size: 25px;
+    font-family: Courier,sans-serif;
+    color: #363431;
+}
+.boton{
+    outline: none;
+    border: 1px solid #363431;
+    color: white;
+    width: 100px;
+    height: 30px;
+    text-shadow: 0px -1px 1px black;
+    font-size: 18px;
+    border-radius: 5px;
+    font-family: Helvetica;
+    cursor: pointer;
+    background-image: linear-gradient(#3aad02,#2c6f05);
+}
+.boton:active{
+    background-image: linear-gradient(#2c6f05,#3aad02);
+}
+.boton:hover{
+    box-shadow: 0px 0px 14px #3aad02;
 }
